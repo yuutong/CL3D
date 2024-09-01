@@ -11,4 +11,4 @@
 [Get Started](/DME.md)
 
 <!-- 背景图片 -->
-![](./public/img/background.jpg)
+![](./public/img/startRun.jpg)
