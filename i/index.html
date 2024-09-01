@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>沧澜3D</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="A docsify.js plugin for typesetting LaTeX with display engines from markdown.">
+
+  <!--简易默认样式-->
+  <!-- <link rel="stylesheet" href="static/docsify/themes/vue.css"> -->
+
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)"  href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+
+
+  <style>
+    /*列宽度自适应不换行*/  
+    table td {
+      width: 10%;
+      white-space: nowrap;
+    }
+    /*表头颜色*/
+    table thead {
+      background-color: rgb(58, 140, 201);
+    }
+    /*斑马线 */
+    table tr:nth-of-type(2n) {
+      background-color: rgb(246, 249, 252);
+    }
+    table td:nth-of-type(2n) {
+      color: rgb(34, 151, 214);
+    }
+    #myTitle {
+      text-align: center;
+    }
+    :root { 
+      --base-font-size: 13px;
+    }
+    /*a标签下划线去掉*/
+    a {
+      text-decoration: none;
+    }
+    /*指向a标签时 标签变色*/
+    a:hover {
+      text-decoration: underline;
+    }
+
+    * {
+      font-family: "KaiTi";
+    }
+  </style>
+  
+</head>
+
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name         : '沧澜3D',
+      repo         : '',
+      homepage     : 'DME.md',   //入口文件为DME.md，原为README.md
+      loadSidebar  : true,       //开启全局侧边栏
+      onlyCover    : true,       //分离首页和详情页
+      coverpage    : '_coverpage.md',       //开启封面
+      autoHeader   : true,
+      subMaxLevel  : 10,         //侧边栏开启目录 - 数字似乎是目录深度 最高接受几级
+      relativePath : true,       //对于文件查找启用相对路径
+      auto2top     : true,
+      executeScript: true,
+      mergeNavbar  : true,
+      topMargin    : 90,         //你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+      themeable    : {
+        responsiveTables: true
+      },
+      search: {
+        maxAge: 86400000,
+        paths: 'auto', // or 'auto'
+        placeholder: 'Type to search',
+        noData: 'No Results',
+        depth: 4,
+      },
+      latex: {
+        inlineMath   : [['$', '$'], ['@', '@']],
+        displayMath  : [['$$', '$$'], ['@@', '@@']],
+        customOptions: {
+          // For MathJax version 3
+          tex: {
+            tags: 'ams'
+          },
+          // For MathJax version 2
+          TeX: {
+            equationNumbers: {
+              autoNumber: "AMS"
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Docsify ---------- -->
+  <!-- 最新版本 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>  -->
+  <!-- 截止至2019年6月6日的最新版本 -->
+  <script src="static/docsify/lib/docsify.min.js"></script> 
+
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- highlight -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
+
+  <!-- theme -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
+  <!-- math -->
+  <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+
+</body>
+</html>
