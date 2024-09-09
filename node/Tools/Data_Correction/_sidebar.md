@@ -1,4 +1,4 @@
-* [返回](../../README.md)
+* [返回](../README.md)
 * [相机设定](./CameraSet.md)
 * [通信设定](./Communciation.md)
 * [添加工具](./Add_Tools.md)
