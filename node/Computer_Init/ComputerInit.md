@@ -5,9 +5,9 @@
 2.	在`New Command` 中输入`.gnome-terminal` 打开终端，在终端输入以下命令：
 
 ```shell
-      sh /etc/.unlock.sh
-      cd /opt/.pvt/
-      ./RunME 1
+sh /etc/.unlock.sh
+cd /opt/.pvt/
+./RunME 1
 ```
 3.	将含有环境安装文件的U盘插到控制器上。
 
